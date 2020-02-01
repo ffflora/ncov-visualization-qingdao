@@ -21,8 +21,8 @@ jobs:
       run: |
         node --version
         npm --version
-        cd web
         npm install
         npm test
+      working-directory: ./web
       env:
         CI: true
