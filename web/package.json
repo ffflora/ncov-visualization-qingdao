@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
+    "echarts": "^4.6.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.0"
@@ -13,7 +14,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "xo",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -30,5 +31,49 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "xo": {
+    "parser": "babel-eslint",
+    "envs": [
+      "node",
+      "browser"
+    ],
+    "extends": [
+      "xo-react"
+    ],
+    "plugins": "react",
+    "ignores": [
+      "hooks/**",
+      "platforms/**",
+      "plugins/**",
+      "res/**",
+      "www/**"
+    ],
+    "rules": {
+      "import/no-unassigned-import": [
+        2,
+        {
+          "allow": [
+            "**/style/*.css",
+            "**/*.css"
+          ]
+        }
+      ],
+      "unicorn/no-abusive-eslint-disable": 0,
+      "eslint-comments/no-unused-disable": 0
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "16"
+    }
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint-config-xo": "^0.27.2",
+    "eslint-config-xo-react": "^0.22.0",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "xo": "^0.25.3"
   }
 }
