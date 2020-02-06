@@ -5,6 +5,12 @@
 
 > To be written
 
+## Team
+
+- [Flora Jiang](https://github.com/ffflora)
+- [Charlotte Guo](https://github.com/Charlotte-ee)
+- [LitoMore](https://github.com/LitoMore)
+
 ## License
 
 MIT
