@@ -15,7 +15,7 @@ We want to use Data Science and front-end skills and and tools to present the mo
 
 Visualizations include but not limited to:
 
-- heatmap of diagnosed cases in Qingdao
+- Heatmap of diagnosed cases in Qingdao
 - Migration trend from other cities to Qindgao
 - Scatter plot of hospitals that treat ncov in Qingdao
 - Data Analysis dashboard on stats
