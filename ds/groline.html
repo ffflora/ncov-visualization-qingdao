@@ -8,11 +8,11 @@
 
 </head>
 <body>
-    <div id="1f328847e72542d7a90d37689c03bf38" class="chart-container" style="width:900px; height:500px;"></div>
+    <div id="2df31a7e38cb4666858de421e4c1aaa9" class="chart-container" style="width:900px; height:500px;"></div>
     <script>
-        var chart_1f328847e72542d7a90d37689c03bf38 = echarts.init(
-            document.getElementById('1f328847e72542d7a90d37689c03bf38'), 'white', {renderer: 'canvas'});
-        var option_1f328847e72542d7a90d37689c03bf38 = {
+        var chart_2df31a7e38cb4666858de421e4c1aaa9 = echarts.init(
+            document.getElementById('2df31a7e38cb4666858de421e4c1aaa9'), 'white', {renderer: 'canvas'});
+        var option_2df31a7e38cb4666858de421e4c1aaa9 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -22,6 +22,7 @@
     "animationEasingUpdate": "cubicOut",
     "animationDelayUpdate": 0,
     "color": [
+        "pink",
         "#c23531",
         "#2f4554",
         "#61a0a8",
@@ -49,10 +50,134 @@
     ],
     "series": [
         {
-            "type": "lines",
-            "name": "Migrated In",
+            "type": "effectScatter",
+            "name": "\u786e\u8bca\u60a3\u8005\u7684\u51fa\u5165\u57ce\u5e02",
             "coordinateSystem": "geo",
-            "zlevel": 2,
+            "showEffectOn": "render",
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            },
+            "symbolSize": 12,
+            "data": [
+                {
+                    "name": "\u8346\u5dde",
+                    "value": [
+                        112.239741,
+                        30.335165,
+                        4
+                    ]
+                },
+                {
+                    "name": "\u65e5\u7167",
+                    "value": [
+                        119.46,
+                        35.42,
+                        1
+                    ]
+                },
+                {
+                    "name": "\u9ec4\u5188",
+                    "value": [
+                        114.87,
+                        30.45,
+                        1
+                    ]
+                },
+                {
+                    "name": "\u5373\u58a8",
+                    "value": [
+                        120.45,
+                        36.38,
+                        1
+                    ]
+                },
+                {
+                    "name": "\u6606\u660e",
+                    "value": [
+                        102.73,
+                        25.04,
+                        6
+                    ]
+                },
+                {
+                    "name": "\u83b1\u829c",
+                    "value": [
+                        117.67,
+                        36.19,
+                        2
+                    ]
+                },
+                {
+                    "name": "\u6d4e\u5357",
+                    "value": [
+                        117,
+                        36.65,
+                        2
+                    ]
+                },
+                {
+                    "name": "\u5b5d\u611f",
+                    "value": [
+                        113.54,
+                        30.56,
+                        2
+                    ]
+                },
+                {
+                    "name": "\u83b1\u897f",
+                    "value": [
+                        120.53,
+                        36.86,
+                        1
+                    ]
+                },
+                {
+                    "name": "\u9102\u5dde",
+                    "value": [
+                        114.52,
+                        30.23,
+                        1
+                    ]
+                },
+                {
+                    "name": "\u6b66\u6c49",
+                    "value": [
+                        114.31,
+                        30.52,
+                        13
+                    ]
+                },
+                {
+                    "name": "\u9752\u5c9b",
+                    "value": [
+                        120.33,
+                        36.07,
+                        28
+                    ]
+                },
+                {
+                    "name": "\u5357\u660c",
+                    "value": [
+                        115.89,
+                        28.68,
+                        2
+                    ]
+                }
+            ],
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "\u786e\u8bca\u60a3\u8005\u8fc1\u5f99\u56fe",
+            "coordinateSystem": "geo",
+            "zlevel": 3,
             "progressive": 400,
             "progressiveThreshold": 3000,
             "effect": {
@@ -60,7 +185,7 @@
                 "brushType": "stroke",
                 "scale": 2.5,
                 "period": 4,
-                "color": "yellow",
+                "color": "grey",
                 "symbol": "diamond",
                 "symbolSize": 6
             },
@@ -87,11 +212,11 @@
                     ]
                 },
                 {
-                    "name": "\u9752\u5c9b\u674e\u6ca7\u533a->\u6b66\u6c49",
+                    "name": "\u9752\u5c9b->\u6b66\u6c49",
                     "coords": [
                         [
-                            120.43,
-                            36.15
+                            120.33,
+                            36.07
                         ],
                         [
                             114.31,
@@ -126,11 +251,11 @@
                     ]
                 },
                 {
-                    "name": "\u5373\u58a8\u533a->\u6b66\u6c49",
+                    "name": "\u9752\u5c9b->\u6b66\u6c49",
                     "coords": [
                         [
-                            120.45,
-                            36.38
+                            120.33,
+                            36.07
                         ],
                         [
                             114.31,
@@ -139,36 +264,42 @@
                     ]
                 },
                 {
-                    "name": "\u6b66\u6c49->\u5373\u58a8\u533a",
+                    "name": "\u6b66\u6c49->\u9752\u5c9b",
                     "coords": [
                         [
                             114.31,
                             30.52
                         ],
                         [
-                            120.45,
-                            36.38
+                            120.33,
+                            36.07
                         ]
                     ]
                 },
                 {
-                    "name": "\u5373\u58a8\u533a->\u9ec4\u5c9b",
+                    "name": "\u9752\u5c9b->\u9752\u5c9b",
                     "coords": [
                         [
-                            120.45,
-                            36.38
+                            120.33,
+                            36.07
                         ],
                         [
-                            120.18,
-                            35.97
+                            120.33,
+                            36.07
                         ]
                     ]
                 },
                 {
-                    "name": "\u6b66\u6c49\u5929\u6cb3\u673a\u573a->\u6d41\u4ead\u673a\u573a",
+                    "name": "\u6b66\u6c49->\u9752\u5c9b",
                     "coords": [
-                        null,
-                        null
+                        [
+                            114.31,
+                            30.52
+                        ],
+                        [
+                            120.33,
+                            36.07
+                        ]
                     ]
                 },
                 {
@@ -224,64 +355,54 @@
                     ]
                 },
                 {
-                    "name": "\u6b66\u6c49->\u9752\u5c9b\u80f6\u5dde",
+                    "name": "\u6b66\u6c49->\u9752\u5c9b",
                     "coords": [
                         [
                             114.31,
                             30.52
                         ],
                         [
-                            120.03336,
-                            36.264622
+                            120.33,
+                            36.07
                         ]
                     ]
                 },
                 {
-                    "name": "\u9752\u5c9b->\u4e91\u5357",
+                    "name": "\u9752\u5c9b->\u6606\u660e",
                     "coords": [
                         [
                             120.33,
                             36.07
                         ],
                         [
-                            102.710002,
-                            25.045806
+                            102.73,
+                            25.04
                         ]
                     ]
                 },
                 {
-                    "name": "\u9752\u5c9b->\u4e91\u5357",
+                    "name": "\u9752\u5c9b->\u6606\u660e",
                     "coords": [
                         [
                             120.33,
                             36.07
                         ],
                         [
-                            102.710002,
-                            25.045806
+                            102.73,
+                            25.04
                         ]
                     ]
                 },
                 {
-                    "name": "\u9752\u5c9b->\u4e91\u5357",
+                    "name": "\u9752\u5c9b->\u6606\u660e",
                     "coords": [
                         [
                             120.33,
                             36.07
                         ],
                         [
-                            102.710002,
-                            25.045806
-                        ]
-                    ]
-                },
-                {
-                    "name": "\u6cf0\u56fd->\u9752\u5c9b",
-                    "coords": [
-                        null,
-                        [
-                            120.33,
-                            36.07
+                            102.73,
+                            25.04
                         ]
                     ]
                 },
@@ -312,19 +433,6 @@
                     ]
                 },
                 {
-                    "name": "\u6b66\u6c49->\u5373\u58a8\u533a",
-                    "coords": [
-                        [
-                            114.31,
-                            30.52
-                        ],
-                        [
-                            120.45,
-                            36.38
-                        ]
-                    ]
-                },
-                {
                     "name": "\u6b66\u6c49->\u9752\u5c9b",
                     "coords": [
                         [
@@ -351,7 +459,20 @@
                     ]
                 },
                 {
-                    "name": "\u6e56\u5317\u9ec4\u5188->\u6c5f\u897f\u5357\u660c",
+                    "name": "\u6b66\u6c49->\u9752\u5c9b",
+                    "coords": [
+                        [
+                            114.31,
+                            30.52
+                        ],
+                        [
+                            120.33,
+                            36.07
+                        ]
+                    ]
+                },
+                {
+                    "name": "\u9ec4\u5188->\u5357\u660c",
                     "coords": [
                         [
                             114.87,
@@ -364,7 +485,7 @@
                     ]
                 },
                 {
-                    "name": "\u6c5f\u897f\u5357\u660c->\u5373\u58a8",
+                    "name": "\u5357\u660c->\u5373\u58a8",
                     "coords": [
                         [
                             115.89,
@@ -377,7 +498,7 @@
                     ]
                 },
                 {
-                    "name": "\u9752\u5c9b->\u6e56\u5317\u5b5d\u611f",
+                    "name": "\u9752\u5c9b->\u5b5d\u611f",
                     "coords": [
                         [
                             120.33,
@@ -390,7 +511,7 @@
                     ]
                 },
                 {
-                    "name": "\u6e56\u5317\u5b5d\u611f->\u9752\u5c9b",
+                    "name": "\u5b5d\u611f->\u9752\u5c9b",
                     "coords": [
                         [
                             113.54,
@@ -403,24 +524,24 @@
                     ]
                 },
                 {
-                    "name": "\u9752\u5c9b->\u6e56\u5317\u8346\u5dde",
+                    "name": "\u9752\u5c9b->\u8346\u5dde",
                     "coords": [
                         [
                             120.33,
                             36.07
                         ],
                         [
-                            120.1,
-                            30.86
+                            112.239741,
+                            30.335165
                         ]
                     ]
                 },
                 {
-                    "name": "\u6e56\u5317\u8346\u5dde->\u9752\u5c9b",
+                    "name": "\u8346\u5dde->\u9752\u5c9b",
                     "coords": [
                         [
-                            120.1,
-                            30.86
+                            112.239741,
+                            30.335165
                         ],
                         [
                             120.33,
@@ -429,11 +550,11 @@
                     ]
                 },
                 {
-                    "name": "\u6e56\u5317\u8346\u5dde->\u9752\u5c9b",
+                    "name": "\u8346\u5dde->\u9752\u5c9b",
                     "coords": [
                         [
-                            120.1,
-                            30.86
+                            112.239741,
+                            30.335165
                         ],
                         [
                             120.33,
@@ -455,11 +576,11 @@
                     ]
                 },
                 {
-                    "name": "\u6e56\u5317\u8346\u5dde->\u9752\u5c9b",
+                    "name": "\u8346\u5dde->\u9752\u5c9b",
                     "coords": [
                         [
-                            120.1,
-                            30.86
+                            112.239741,
+                            30.335165
                         ],
                         [
                             120.33,
@@ -497,7 +618,7 @@
             "lineStyle": {
                 "width": 1,
                 "opacity": 1,
-                "curveness": 0.3,
+                "curveness": 0.2,
                 "type": "solid"
             },
             "label": {
@@ -510,12 +631,13 @@
     "legend": [
         {
             "data": [
-                "Migrated In"
+                "\u786e\u8bca\u60a3\u8005\u7684\u51fa\u5165\u57ce\u5e02",
+                "\u786e\u8bca\u60a3\u8005\u8fc1\u5f99\u56fe"
             ],
             "selected": {
-                "Migrated In": true
+                "\u786e\u8bca\u60a3\u8005\u7684\u51fa\u5165\u57ce\u5e02": true,
+                "\u786e\u8bca\u60a3\u8005\u8fc1\u5f99\u56fe": true
             },
-            "selectedMode": "single",
             "show": true,
             "padding": 5,
             "itemGap": 10,
@@ -538,7 +660,7 @@
     },
     "title": [
         {
-            "text": "Qingdao Migration Trends \nTop 10 Cities \nfrom 08/08/2018 to 08/08/2019",
+            "text": "Geo-Lines",
             "padding": 5,
             "itemGap": 10
         }
@@ -547,13 +669,13 @@
         "map": "china",
         "roam": true,
         "itemStyle": {
-            "color": "#e0684a",
+            "color": " #154360 ",
             "borderColor": "#111"
         },
         "emphasis": {}
     }
 };
-        chart_1f328847e72542d7a90d37689c03bf38.setOption(option_1f328847e72542d7a90d37689c03bf38);
+        chart_2df31a7e38cb4666858de421e4c1aaa9.setOption(option_2df31a7e38cb4666858de421e4c1aaa9);
     </script>
 </body>
 </html>

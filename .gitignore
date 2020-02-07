@@ -3,6 +3,8 @@
 data
 .ipynb_checkpoints
 qd-cnov-database-2027ad01e8de.json
+__pycache__/
+
 # dependencies
 node_modules
 .pnp
