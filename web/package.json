@@ -1,5 +1,5 @@
 {
-  "name": "qingdao-ncov-viz",
+  "name": "ncov-visualization-qingdao",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

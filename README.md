@@ -39,10 +39,10 @@ Please keep China into your prayers, it is a tough time now, but we will get ove
 MIT
 
 <!-- Links -->
-[node-ci-badge]: https://github.com/ffflora/qingdao-ncov-viz/workflows/Node/badge.svg
-[node-ci-link]: https://github.com/ffflora/qingdao-ncov-viz/actions?query=workflow%3ANode
-[python-ci-badge]: https://github.com/ffflora/qingdao-ncov-viz/workflows/Python/badge.svg
-[python-ci-link]: https://github.com/ffflora/qingdao-ncov-viz/actions?query=workflow%3APython
+[node-ci-badge]: https://github.com/ffflora/ncov-visualization-qingdao/workflows/Node/badge.svg
+[node-ci-link]: https://github.com/ffflora/ncov-visualization-qingdao/actions?query=workflow%3ANode
+[python-ci-badge]: https://github.com/ffflora/ncov-visualization-qingdao/workflows/Python/badge.svg
+[python-ci-link]: https://github.com/ffflora/ncov-visualization-qingdao/actions?query=workflow%3APython
 [profile-flora]: https://www.linkedin.com/in/flora-w-jiang/
 [profile-charlotte]: https://github.com/Charlotte-ee
 [profile-litomore]: https://github.com/LitoMore
