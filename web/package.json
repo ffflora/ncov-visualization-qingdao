@@ -1,5 +1,6 @@
 {
   "name": "ncov-visualization-qingdao",
+  "homepage": "https://ffflora.github.io/ncov-visualization-qingdao",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
