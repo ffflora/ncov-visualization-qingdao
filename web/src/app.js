@@ -1,6 +1,5 @@
 import React from 'react';
 import * as echarts from 'echarts';
-import {Radio} from 'antd';
 import {renderOption} from './mock/options';
 import mapLayer from './geojson/qingdao';
 
@@ -18,14 +17,6 @@ class App extends React.Component {
 	render() {
 		return (
 			<section>
-				<div>
-					<Radio.Group defaultValue="a" buttonStyle="solid">
-						<Radio.Button value="a">定点医院</Radio.Button>
-						<Radio.Button value="b">2</Radio.Button>
-						<Radio.Button value="c">3</Radio.Button>
-						<Radio.Button value="d">4</Radio.Button>
-					</Radio.Group>
-				</div>
 				<div
 					id="main"
 					style={{
