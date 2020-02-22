@@ -1,3 +1,5 @@
+import clinic from '../dataset/clinic-coord';
+
 export const renderOption = {
 	animation: true,
 	animationThreshold: 2000,
@@ -35,223 +37,53 @@ export const renderOption = {
 	],
 	series: [
 		{
+			name: '',
 			type: 'effectScatter',
-			name: '\u786E\u8BCA\u4EBA\u6570-Scatter',
 			coordinateSystem: 'geo',
+			data: clinic.map(([key, value]) => {
+				return {
+					name: key,
+					value
+				};
+			}),
+			symbolSize() {
+				return 10;
+			},
 			showEffectOn: 'render',
 			rippleEffect: {
-				show: true,
-				brushType: 'stroke',
-				scale: 2.5,
-				period: 4
+				brushType: 'stroke'
 			},
-			symbolSize: 12,
-			data: [
-				{
-					name: '\u5E02\u5357\u533a',
-					value: [
-						120.38,
-						36.07,
-						2
-					]
-				},
-				{
-					name: '\u5E02\u5317\u533a',
-					value: [
-						120.38,
-						36.08,
-						4
-					]
-				},
-				{
-					name: '\u674E\u6CA7\u533A',
-					value: [
-						120.43,
-						36.15,
-						2
-					]
-				},
-				{
-					name: '\u5D02\u5C71\u533A',
-					value: [
-						120.47,
-						36.1,
-						2
-					]
-				},
-				{
-					name: '\u57CE\u9633\u533a',
-					value: [
-						120.37,
-						36.3,
-						1
-					]
-				},
-				{
-					name: '\u9EC4\u5C9B\u533A',
-					value: [
-						120.18,
-						35.97,
-						9
-					]
-				},
-				{
-					name: '\u5373\u58a8\u5e02',
-					value: [
-						120.45,
-						36.38,
-						4
-					]
-				},
-				{
-					name: '\u80F6\u5DDE\u5E02',
-					value: [
-						120.03,
-						36.27,
-						1
-					]
-				},
-				{
-					name: '\u5E73\u5EA6\u5E02',
-					value: [
-						119.95,
-						36.78,
-						3
-					]
-				},
-				{
-					name: '\u83B1\u897F\u5E02',
-					value: [
-						120.5,
-						36.87,
-						1
-					]
-				}
-			],
+			hoverAnimation: true,
 			label: {
-				show: false,
-				position: 'top',
-				margin: 8
-			}
-		},
-		{
-			type: 'heatmap',
-			name: '\u786E\u8BCA\u4EBA\u6570-heatmap',
-			coordinateSystem: 'geo',
-			data: [
-				{
-					name: '\u5E02\u5357\u533a',
-					value: [
-						120.38,
-						36.07,
-						2
-					]
-				},
-				{
-					name: '\u5E02\u5317\u533a',
-					value: [
-						120.38,
-						36.08,
-						4
-					]
-				},
-				{
-					name: '\u674E\u6CA7\u533A',
-					value: [
-						120.43,
-						36.15,
-						2
-					]
-				},
-				{
-					name: '\u5D02\u5C71\u533A',
-					value: [
-						120.47,
-						36.1,
-						2
-					]
-				},
-				{
-					name: '\u57CE\u9633\u533a',
-					value: [
-						120.37,
-						36.3,
-						1
-					]
-				},
-				{
-					name: '\u9EC4\u5C9B\u533A',
-					value: [
-						120.18,
-						35.97,
-						9
-					]
-				},
-				{
-					name: '\u5373\u58a8\u5e02',
-					value: [
-						120.45,
-						36.38,
-						4
-					]
-				},
-				{
-					name: '\u80F6\u5DDE\u5E02',
-					value: [
-						120.03,
-						36.27,
-						1
-					]
-				},
-				{
-					name: '\u5E73\u5EA6\u5E02',
-					value: [
-						119.95,
-						36.78,
-						3
-					]
-				},
-				{
-					name: '\u83B1\u897F\u5E02',
-					value: [
-						120.5,
-						36.87,
-						1
-					]
-				}
-			],
-			pointSize: 20,
-			blurSize: 20,
-			label: {
-				show: false,
-				position: 'top',
-				margin: 8
+				formatter: '{b}',
+				position: 'right',
+				show: false
 			},
-			rippleEffect: {
-				show: true,
-				brushType: 'stroke',
-				scale: 2.5,
-				period: 4
-			}
+			itemStyle: {
+				color: 'purple',
+				shadowBlur: 10,
+				shadowColor: '#333'
+			},
+			zlevel: 1
 		}
 	],
-	legend: [
-		{
-			data: [
-				'\u786E\u8BCA\u4EBA\u6570-Scatter',
-				'\u786E\u8BCA\u4EBA\u6570-heatmap'
-			],
-			selected: {
-				'\u786E\u8BCA\u4EBA\u6570-Scatter': true,
-				'\u786E\u8BCA\u4EBA\u6570-heatmap': true
-			},
-			show: true,
-			padding: 5,
-			itemGap: 10,
-			itemWidth: 25,
-			itemHeight: 14
-		}
-	],
+	// Legend: [
+	// 	{
+	// 		data: [
+	// 			'\u786E\u8BCA\u4EBA\u6570-Scatter',
+	// 			'\u786E\u8BCA\u4EBA\u6570-heatmap'
+	// 		],
+	// 		selected: {
+	// 			'\u786E\u8BCA\u4EBA\u6570-Scatter': true,
+	// 			'\u786E\u8BCA\u4EBA\u6570-heatmap': true
+	// 		},
+	// 		show: false,
+	// 		padding: 5,
+	// 		itemGap: 10,
+	// 		itemWidth: 25,
+	// 		itemHeight: 14
+	// 	}
+	// ],
 	tooltip: {
 		show: true,
 		trigger: 'item',
@@ -260,7 +92,7 @@ export const renderOption = {
 			type: 'line'
 		},
 		formatter(params) {
-			return params.name + ' : ' + params.value[2];
+			return params.name;
 		},
 		textStyle: {
 			fontSize: 14
@@ -269,16 +101,16 @@ export const renderOption = {
 	},
 	title: [
 		{
-			text: '\u9752\u5c9b\u5404\u533a\u5e02\u786e\u8bca\u4eba\u6570',
+			text: '定点医院分布图',
 			padding: 5,
 			itemGap: 10
 		}
 	],
 	visualMap: {
-		show: true,
+		show: false,
 		type: 'continuous',
 		min: 0,
-		max: 10,
+		max: 30,
 		inRange: {
 			color: [
 				'#50a3ba',
@@ -299,8 +131,8 @@ export const renderOption = {
 		map: '\u9752\u5c9b',
 		roam: true,
 		itemStyle: {
-			color: ' #154360 ',
-			borderColor: '#111'
+			color: ' #fff',
+			borderColor: '#222222'
 		},
 		emphasis: {}
 	}

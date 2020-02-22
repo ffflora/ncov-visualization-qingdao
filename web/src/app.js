@@ -20,8 +20,8 @@ class App extends React.Component {
 				<div
 					id="main"
 					style={{
-						width: 900,
-						height: 500
+						width: '100vw',
+						height: '100vh'
 					}}
 				/>
 			</section>
