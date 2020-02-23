@@ -1,3 +1,5 @@
+import coord from './coord';
+
 const data = {
 	市南区: '2',
 	市北区: '6',
@@ -13,6 +15,6 @@ const data = {
 
 const dataTransform = d => Object.entries(d)
 	.filter(l => !isNaN(l[1]))
-	.map(l => [l[0], Number(l[1])]);
+	.map(l => [l[0], Number(l[1]), coord[l[0]]]);
 
 export default dataTransform(data);

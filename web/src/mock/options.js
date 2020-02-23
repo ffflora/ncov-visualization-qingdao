@@ -1,4 +1,5 @@
 import clinic from '../dataset/clinic-coord';
+import cured from '../dataset/cured';
 
 export const getOption = type => {
 	let series = [];
@@ -33,6 +34,37 @@ export const getOption = type => {
 					shadowColor: '#333'
 				},
 				zlevel: 1
+			}];
+			break;
+		case 'cured':
+			series = [{
+				name: 'Cured',
+				type: 'scatter',
+				coordinateSystem: 'geo',
+				data: cured
+					.filter(([, , coord]) => Array.isArray(coord))
+					.map(([key, value, coord]) => {
+						return {
+							name: key,
+							value: coord.concat(value)
+						};
+					}),
+				symbolSize(val) {
+					return val[1] / 2;
+				},
+				label: {
+					formatter: '{b}',
+					position: 'right',
+					show: false
+				},
+				itemStyle: {
+					color: 'purple'
+				},
+				emphasis: {
+					label: {
+						show: true
+					}
+				}
 			}];
 			break;
 		default:
@@ -101,6 +133,10 @@ export const getOption = type => {
 				type: 'line'
 			},
 			formatter(params) {
+				if (params.seriesName === 'Cured') {
+					return params.name + ': ' + params.data.value[2];
+				}
+
 				return params.name;
 			},
 			textStyle: {
