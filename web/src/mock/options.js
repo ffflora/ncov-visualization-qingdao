@@ -42,7 +42,7 @@ export const getOption = type => {
 				type: 'scatter',
 				coordinateSystem: 'geo',
 				data: cured
-					.filter(([, , coord]) => Array.isArray(coord))
+					.filter(x => Array.isArray(x[2]))
 					.map(([key, value, coord]) => {
 						return {
 							name: key,
